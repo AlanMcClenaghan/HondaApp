@@ -106,7 +106,7 @@
   [
     "pages/home#home.html@0.0.1",
     {
-      "ownHash": "c4a72344836606094e55a8e2f4e8942a",
+      "ownHash": "24a0c67db05f633e1cba287892051941",
       "module": "./cache/pages_home_home_html_0_0_1.js",
       "moduleMeta": "./cache/pages_home_home_html_0_0_1.meta.json"
     }
@@ -114,7 +114,7 @@
   [
     "pages/home#home.css@0.0.1",
     {
-      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "ownHash": "ff322cd622bf88132a7d43ef1b70bbc8",
       "module": "./cache/pages_home_home_css_0_0_1.js",
       "moduleMeta": "./cache/pages_home_home_css_0_0_1.meta.json"
     }
@@ -130,7 +130,7 @@
   [
     "pages/buildAndPrice@0.0.1",
     {
-      "ownHash": "44b62ac65d54212bd89a3c304c6f7598",
+      "ownHash": "9d0402fca6bd8499c74d253d8f36fe9e",
       "module": "./cache/pages_buildAndPrice_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_0_0_1.meta.json"
     }
@@ -138,7 +138,7 @@
   [
     "pages/buildAndPrice#buildAndPrice.html@0.0.1",
     {
-      "ownHash": "d2a287dc285398f07eec09552d8f9b1e",
+      "ownHash": "6c90287cc90b2e7ca2a2c2ffe4ffbf43",
       "module": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.meta.json"
     }
@@ -197,6 +197,38 @@
       "ownHash": "13fcec3d73f055fccd306149598cb9b5",
       "module": "./cache/components_navbar_navbar_scoped_css_scoped=true_0_0_1.js",
       "moduleMeta": "./cache/components_navbar_navbar_scoped_css_scoped=true_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/carDetails@0.0.1",
+    {
+      "ownHash": "762f127fd5ae917d1cb5cee4e99e5b79",
+      "module": "./cache/components_carDetails_0_0_1.js",
+      "moduleMeta": "./cache/components_carDetails_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/carDetails#carDetails.html@0.0.1",
+    {
+      "ownHash": "0c15d987ab706a6bfcedd1e4a8f71060",
+      "module": "./cache/components_carDetails_carDetails_html_0_0_1.js",
+      "moduleMeta": "./cache/components_carDetails_carDetails_html_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/carDetails#carDetails.css@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/components_carDetails_carDetails_css_0_0_1.js",
+      "moduleMeta": "./cache/components_carDetails_carDetails_css_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/carDetails#carDetails.scoped.css?scoped=true@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/components_carDetails_carDetails_scoped_css_scoped=true_0_0_1.js",
+      "moduleMeta": "./cache/components_carDetails_carDetails_scoped_css_scoped=true_0_0_1.meta.json"
     }
   ]
 ]

@@ -5,12 +5,10 @@ import _implicitStylesheets from "./home.css";
 import _implicitScopedStylesheets from "./home.scoped.css?scoped=true";
 
 import {parseFragment, registerTemplate} from "lwc";
-const $fragment1 = parseFragment`<div${3}>Hello I am Home Page</div>`;
-const $fragment2 = parseFragment`<button class="slds-button slds-button_destructive${0}"${2}>Brand Button</button>`;
-const $fragment3 = parseFragment`<a href="/buildAndPrice"${3}>Click me</a>`;
+const $fragment1 = parseFragment`<main${3}><h2 class="slds-text-align_center first_heading${0}"${2}>Your New Honda</h2><h2 class="slds-text-align_center second_heading${0}"${2}>CR-V</h2><div class="slds-text-align_center ${0}"${2}><img src="/public/assets/honda/vti/ignite_red.png" alt="Ignite Red" class="responsiveImage${0}"${2}></div><div class="slds-grid slds-gutters slds-wrap${0}"${2}><div class="slds-col benefits${0}"${2}><div class="fiveNumber${0}"${2}>5</div><div${3}>Low Price Services</div></div><div class="slds-col benefits${0}"${2}><div class="fiveNumber${0}"${2}>5</div><div${3}>Year Unlimited KM Warranty</div></div><div class="slds-col benefits${0}"${2}><div class="fiveNumber${0}"${2}>5</div><div${3}>Year Premium Roadside Assist</div></div></div></main>`;
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {st: api_static_fragment} = $api;
-  return [api_static_fragment($fragment1(), 1), api_static_fragment($fragment2(), 3), api_static_fragment($fragment3(), 5)];
+  return [api_static_fragment($fragment1(), 1)];
   /*LWC compiler v2.38.1*/
 }
 export default registerTemplate(tmpl);
