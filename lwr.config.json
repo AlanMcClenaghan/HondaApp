@@ -2,10 +2,16 @@
     "lwc": { "modules": [{ "dir": "$rootDir/src/modules" }] },
     "routes": [
         {
-            "id": "example",
+            "id": "home",
             "path": "/",
             "layoutTemplate":"$layoutsDir/main.html",
-            "rootComponent": "example/app"
+            "rootComponent": "pages/home"
+        },
+        {
+            "id": "buildAndPrice",
+            "path": "/buildAndPrice/:variant",
+            "layoutTemplate":"$layoutsDir/main.html",
+            "rootComponent": "pages/buildAndPrice"
         }
     ],
     "assets": [

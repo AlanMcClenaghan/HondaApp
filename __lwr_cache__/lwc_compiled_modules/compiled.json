@@ -94,5 +94,69 @@
       "module": "./cache/example_app_app_scoped_css_scoped=true_0_0_1.js",
       "moduleMeta": "./cache/example_app_app_scoped_css_scoped=true_0_0_1.meta.json"
     }
+  ],
+  [
+    "pages/home@0.0.1",
+    {
+      "ownHash": "345e3c36656f006211db4d4b4e2c19db",
+      "module": "./cache/pages_home_0_0_1.js",
+      "moduleMeta": "./cache/pages_home_0_0_1.meta.json"
+    }
+  ],
+  [
+    "pages/home#home.html@0.0.1",
+    {
+      "ownHash": "f162330935145ad1f213bdb27eff1ce5",
+      "module": "./cache/pages_home_home_html_0_0_1.js",
+      "moduleMeta": "./cache/pages_home_home_html_0_0_1.meta.json"
+    }
+  ],
+  [
+    "pages/home#home.css@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/pages_home_home_css_0_0_1.js",
+      "moduleMeta": "./cache/pages_home_home_css_0_0_1.meta.json"
+    }
+  ],
+  [
+    "pages/home#home.scoped.css?scoped=true@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/pages_home_home_scoped_css_scoped=true_0_0_1.js",
+      "moduleMeta": "./cache/pages_home_home_scoped_css_scoped=true_0_0_1.meta.json"
+    }
+  ],
+  [
+    "pages/buildAndPrice@0.0.1",
+    {
+      "ownHash": "44b62ac65d54212bd89a3c304c6f7598",
+      "module": "./cache/pages_buildAndPrice_0_0_1.js",
+      "moduleMeta": "./cache/pages_buildAndPrice_0_0_1.meta.json"
+    }
+  ],
+  [
+    "pages/buildAndPrice#buildAndPrice.html@0.0.1",
+    {
+      "ownHash": "8cbaf9bf3aee2dcda60c105de36448d5",
+      "module": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.js",
+      "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.meta.json"
+    }
+  ],
+  [
+    "pages/buildAndPrice#buildAndPrice.css@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/pages_buildAndPrice_buildAndPrice_css_0_0_1.js",
+      "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_css_0_0_1.meta.json"
+    }
+  ],
+  [
+    "pages/buildAndPrice#buildAndPrice.scoped.css?scoped=true@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/pages_buildAndPrice_buildAndPrice_scoped_css_scoped=true_0_0_1.js",
+      "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_scoped_css_scoped=true_0_0_1.meta.json"
+    }
   ]
 ]
