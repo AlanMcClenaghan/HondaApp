@@ -6,10 +6,11 @@ import _implicitScopedStylesheets from "./home.scoped.css?scoped=true";
 
 import {parseFragment, registerTemplate} from "lwc";
 const $fragment1 = parseFragment`<div${3}>Hello I am Home Page</div>`;
-const $fragment2 = parseFragment`<a href="/buildAndPrice"${3}>Click me</a>`;
+const $fragment2 = parseFragment`<button class="slds-button slds-button_destructive${0}"${2}>Brand Button</button>`;
+const $fragment3 = parseFragment`<a href="/buildAndPrice"${3}>Click me</a>`;
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {st: api_static_fragment} = $api;
-  return [api_static_fragment($fragment1(), 1), api_static_fragment($fragment2(), 3)];
+  return [api_static_fragment($fragment1(), 1), api_static_fragment($fragment2(), 3), api_static_fragment($fragment3(), 5)];
   /*LWC compiler v2.38.1*/
 }
 export default registerTemplate(tmpl);

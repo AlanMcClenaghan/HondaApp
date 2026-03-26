@@ -1007,6 +1007,11 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@salesforce-ux/design-system@^2.29.0":
+  version "2.29.0"
+  resolved "https://registry.yarnpkg.com/@salesforce-ux/design-system/-/design-system-2.29.0.tgz#fd2571b81eeebc70c4533bc08e2cc317c6b4b8e2"
+  integrity sha512-5Dt5BDAhjWMq01z9ire04MA4CSGe+indhfH/LvESK06e3Si3EuEcL6TTnDYejXttcLntAQVxn/+p+L1LwxCN4A==
+
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"

@@ -5,13 +5,19 @@
             "id": "home",
             "path": "/",
             "layoutTemplate":"$layoutsDir/main.html",
-            "rootComponent": "pages/home"
+            "rootComponent": "pages/home",
+            "bootstrap":{
+                "syntheticShadow": true
+            }
         },
         {
             "id": "buildAndPrice",
-            "path": "/buildAndPrice/:variant",
+            "path": "/buildAndPrice",
             "layoutTemplate":"$layoutsDir/main.html",
-            "rootComponent": "pages/buildAndPrice"
+            "rootComponent": "pages/buildAndPrice",
+            "bootstrap":{
+                "syntheticShadow": true
+            }
         }
     ],
     "assets": [
