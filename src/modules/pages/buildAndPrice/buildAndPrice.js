@@ -53,17 +53,44 @@ export default class BuildAndPrice extends LightningElement {
     colorsList = COLORS
     selectedVariant = CRV_VARIANTS[0]
     selectedPrice = this.selectedVariant.price
-
+    selectedImageName = this.colorsList[0].value
+    selectedColorName = this.colorsList[0].label
 
     //Handler for when a variant is selected
     selectionHandler(event){
         console.log("selected record", event.detail.selected)
         console.log("selected variant", event.detail.variant)
+        const {selected, variant} = event.detail
+        this.selectedVariant = {...selected, imageName:this.selectedImageName}
+        this.selectedPrice = this.selectedVariant.price
+        this.updateVariants(variant)
     }
 
     //Handler for when a color is selected
     colorSelectionHandler(event){
-      console.log("selected color", event.detail)
+        console.log("selected color", event.detail)
+        this.selectedImageName = event.detail
+        this.selectedVariant = {...this.selectedVariant, imageName:this.selectedImageName }
+        this.updateColors(this.selectedImageName)
+    }
+
+    // update the checked property for the colors based on the selected value
+    updateColors(value){
+        this.colorsList = this.colorsList.map(item=>{
+          let checked = item.value === value
+          if(checked){
+            this.selectedColorName = item.label
+          }
+          return {...item, checked}
+        })
+    }
+
+    // Update the checked property for the variants based on the selected variant
+    updateVariants(value){
+      this.crvVariants = this.crvVariants.map(item=>{
+        let checked = item.variant === value
+        return {...item, checked}
+      })
     }
 
 }

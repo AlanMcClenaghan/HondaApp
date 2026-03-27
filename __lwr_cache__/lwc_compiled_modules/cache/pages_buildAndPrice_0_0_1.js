@@ -1,5 +1,10 @@
 import { registerDecorators as _registerDecorators, registerComponent as _registerComponent, LightningElement } from "lwc";
 import _tmpl from "./buildAndPrice.html";
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typeof key === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 const CRV_VARIANTS = [{
   variant: "VTi",
   price: 38900,
@@ -57,21 +62,60 @@ class BuildAndPrice extends LightningElement {
     this.colorsList = COLORS;
     this.selectedVariant = CRV_VARIANTS[0];
     this.selectedPrice = this.selectedVariant.price;
+    this.selectedImageName = this.colorsList[0].value;
+    this.selectedColorName = this.colorsList[0].label;
   }
   //Handler for when a variant is selected
   selectionHandler(event) {
     console.log("selected record", event.detail.selected);
     console.log("selected variant", event.detail.variant);
+    const {
+      selected,
+      variant
+    } = event.detail;
+    this.selectedVariant = _objectSpread(_objectSpread({}, selected), {}, {
+      imageName: this.selectedImageName
+    });
+    this.selectedPrice = this.selectedVariant.price;
+    this.updateVariants(variant);
   }
 
   //Handler for when a color is selected
   colorSelectionHandler(event) {
     console.log("selected color", event.detail);
+    this.selectedImageName = event.detail;
+    this.selectedVariant = _objectSpread(_objectSpread({}, this.selectedVariant), {}, {
+      imageName: this.selectedImageName
+    });
+    this.updateColors(this.selectedImageName);
+  }
+
+  // update the checked property for the colors based on the selected value
+  updateColors(value) {
+    this.colorsList = this.colorsList.map(item => {
+      let checked = item.value === value;
+      if (checked) {
+        this.selectedColorName = item.label;
+      }
+      return _objectSpread(_objectSpread({}, item), {}, {
+        checked
+      });
+    });
+  }
+
+  // Update the checked property for the variants based on the selected variant
+  updateVariants(value) {
+    this.crvVariants = this.crvVariants.map(item => {
+      let checked = item.variant === value;
+      return _objectSpread(_objectSpread({}, item), {}, {
+        checked
+      });
+    });
   }
   /*LWC compiler v2.38.1*/
 }
 _registerDecorators(BuildAndPrice, {
-  fields: ["crvVariants", "colorsList", "selectedVariant", "selectedPrice"]
+  fields: ["crvVariants", "colorsList", "selectedVariant", "selectedPrice", "selectedImageName", "selectedColorName"]
 });
 export default _registerComponent(BuildAndPrice, {
   tmpl: _tmpl

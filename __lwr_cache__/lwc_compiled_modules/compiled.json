@@ -130,7 +130,7 @@
   [
     "pages/buildAndPrice@0.0.1",
     {
-      "ownHash": "51dc15aed64fafde34ba4389c45ef929",
+      "ownHash": "235a4d297030ffc5f09973f4c7e15e61",
       "module": "./cache/pages_buildAndPrice_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_0_0_1.meta.json"
     }
