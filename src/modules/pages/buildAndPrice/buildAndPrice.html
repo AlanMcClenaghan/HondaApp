@@ -7,6 +7,12 @@
             <div class="slds-col slds-size_12-of-12 slds-large-size_4-of-12">
                 <h2 class="slds-text-heading_large">CR-V Range</h2>
                 <components-range-selection variants={crvVariants} onselection={selectionHandler}></components-range-selection>
+
+                <h2 class="slds-text-heading_large slds-m-top_large">CR-V Colors</h2>
+                <template for:each={colorsList} for:item="item">
+                    <components-color-selection color={item} key={item.value}
+                    oncolorselection={colorSelectionHandler}></components-color-selection>
+                </template>
             </div>
         </div>
     </main>

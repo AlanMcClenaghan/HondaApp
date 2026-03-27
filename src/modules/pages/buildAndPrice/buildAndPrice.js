@@ -38,13 +38,27 @@ const CRV_VARIANTS = [
       imageName:"ignite_red"
     }
   ]
+
+  // Define the colors available for the car
+  const COLORS = [
+    {label:"Ignite Red (Metallic)", value:"ignite_red", checked:true},
+    {label:"Brilliant Sporty Blue", value:"sporty_blue"},
+    {label:"Crystal Black", value:"crystal_black"},
+    {label:"Platinum White (Pearlescent)", value:"platinum_white"}
+  ]
+
 export default class BuildAndPrice extends LightningElement {
     crvVariants = CRV_VARIANTS
+    colorsList = COLORS
     selectedVariant = CRV_VARIANTS[0]
 
     //Handler for when a variant is selected
     selectionHandler(event){
         console.log("selected record", event.detail.selected)
         console.log("selected variant", event.detail.variant)
+    }
+    //Handler for when a color is selected
+    colorSelectionHandler(event){
+      console.log("selected color", event.detail)
     }
 }

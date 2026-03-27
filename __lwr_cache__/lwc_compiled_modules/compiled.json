@@ -130,7 +130,7 @@
   [
     "pages/buildAndPrice@0.0.1",
     {
-      "ownHash": "dde776e064f71bda7adac7973c664e8a",
+      "ownHash": "2711efbd54310a1cfb6872b1d790f814",
       "module": "./cache/pages_buildAndPrice_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_0_0_1.meta.json"
     }
@@ -138,7 +138,7 @@
   [
     "pages/buildAndPrice#buildAndPrice.html@0.0.1",
     {
-      "ownHash": "25d58407ae475f7208330d9e41e55755",
+      "ownHash": "3aeaa23e03ab59cd6bd03fffde1d871e",
       "module": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.meta.json"
     }
@@ -261,6 +261,38 @@
       "ownHash": "13fcec3d73f055fccd306149598cb9b5",
       "module": "./cache/components_rangeSelection_rangeSelection_scoped_css_scoped=true_0_0_1.js",
       "moduleMeta": "./cache/components_rangeSelection_rangeSelection_scoped_css_scoped=true_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/colorSelection@0.0.1",
+    {
+      "ownHash": "0e7fde4837309d052a39b4aa9ad34e2c",
+      "module": "./cache/components_colorSelection_0_0_1.js",
+      "moduleMeta": "./cache/components_colorSelection_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/colorSelection#colorSelection.html@0.0.1",
+    {
+      "ownHash": "ddb1087dd93d776e15af0e8d5ffde0b0",
+      "module": "./cache/components_colorSelection_colorSelection_html_0_0_1.js",
+      "moduleMeta": "./cache/components_colorSelection_colorSelection_html_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/colorSelection#colorSelection.css@0.0.1",
+    {
+      "ownHash": "5e6762e22b8acb70d861cdf87697ece5",
+      "module": "./cache/components_colorSelection_colorSelection_css_0_0_1.js",
+      "moduleMeta": "./cache/components_colorSelection_colorSelection_css_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/colorSelection#colorSelection.scoped.css?scoped=true@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/components_colorSelection_colorSelection_scoped_css_scoped=true_0_0_1.js",
+      "moduleMeta": "./cache/components_colorSelection_colorSelection_scoped_css_scoped=true_0_0_1.meta.json"
     }
   ]
 ]
