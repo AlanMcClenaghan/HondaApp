@@ -7,20 +7,19 @@ import _implicitScopedStylesheets from "./buildAndPrice.scoped.css?scoped=true";
 import _componentsCarDetails from "components/carDetails";
 import _componentsRangeSelection from "components/rangeSelection";
 import _componentsColorSelection from "components/colorSelection";
+import _componentsPriceFooter from "components/priceFooter";
 import {parseFragment, registerTemplate} from "lwc";
 const $fragment1 = parseFragment`<h2 class="slds-text-heading_large${0}"${2}>CR-V Range</h2>`;
 const $fragment2 = parseFragment`<h2 class="slds-text-heading_large slds-m-top_large${0}"${2}>CR-V Colors</h2>`;
 const stc0 = {
-  classMap: {
-    "slds-p-around_medium": true
-  },
   key: 0
 };
 const stc1 = {
   classMap: {
     "slds-grid": true,
     "slds-wrap": true,
-    "slds-m-bottom_large": true
+    "slds-m-bottom_large": true,
+    "slds-p-around_medium": true
   },
   key: 1
 };
@@ -39,6 +38,20 @@ const stc3 = {
     "slds-large-size_4-of-12": true
   },
   key: 4
+};
+const stc4 = {
+  classMap: {
+    "slds-grid": true,
+    "slds-wrap": true
+  },
+  key: 11
+};
+const stc5 = {
+  classMap: {
+    "slds-col": true,
+    "slds-large-size_12-of-12": true
+  },
+  key: 12
 };
 function tmpl($api, $cmp, $slotset, $ctx) {
   const {c: api_custom_element, h: api_element, st: api_static_fragment, b: api_bind, k: api_key, i: api_iterator, f: api_flatten} = $api;
@@ -66,7 +79,12 @@ function tmpl($api, $cmp, $slotset, $ctx) {
         "colorselection": _m1 || ($ctx._m1 = api_bind($cmp.colorSelectionHandler))
       }
     });
-  })]))])])];
+  })]))]), api_element("div", stc4, [api_element("div", stc5, [api_custom_element("components-price-footer", _componentsPriceFooter, {
+    props: {
+      "price": $cmp.selectedPrice
+    },
+    key: 13
+  })])])])];
   /*LWC compiler v2.38.1*/
 }
 export default registerTemplate(tmpl);

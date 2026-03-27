@@ -48,17 +48,22 @@ const CRV_VARIANTS = [
   ]
 
 export default class BuildAndPrice extends LightningElement {
+
     crvVariants = CRV_VARIANTS
     colorsList = COLORS
     selectedVariant = CRV_VARIANTS[0]
+    selectedPrice = this.selectedVariant.price
+
 
     //Handler for when a variant is selected
     selectionHandler(event){
         console.log("selected record", event.detail.selected)
         console.log("selected variant", event.detail.variant)
     }
+
     //Handler for when a color is selected
     colorSelectionHandler(event){
       console.log("selected color", event.detail)
     }
+
 }

@@ -56,12 +56,14 @@ class BuildAndPrice extends LightningElement {
     this.crvVariants = CRV_VARIANTS;
     this.colorsList = COLORS;
     this.selectedVariant = CRV_VARIANTS[0];
+    this.selectedPrice = this.selectedVariant.price;
   }
   //Handler for when a variant is selected
   selectionHandler(event) {
     console.log("selected record", event.detail.selected);
     console.log("selected variant", event.detail.variant);
   }
+
   //Handler for when a color is selected
   colorSelectionHandler(event) {
     console.log("selected color", event.detail);
@@ -69,7 +71,7 @@ class BuildAndPrice extends LightningElement {
   /*LWC compiler v2.38.1*/
 }
 _registerDecorators(BuildAndPrice, {
-  fields: ["crvVariants", "colorsList", "selectedVariant"]
+  fields: ["crvVariants", "colorsList", "selectedVariant", "selectedPrice"]
 });
 export default _registerComponent(BuildAndPrice, {
   tmpl: _tmpl
