@@ -47,6 +47,8 @@ const CRV_VARIANTS = [
     {label:"Platinum White (Pearlescent)", value:"platinum_white"}
   ]
 
+  const ANIMATED_STARTING_PRICE = 38000
+
 export default class BuildAndPrice extends LightningElement {
 
     showModal = false
@@ -56,6 +58,12 @@ export default class BuildAndPrice extends LightningElement {
     selectedPrice = this.selectedVariant.price
     selectedImageName = this.colorsList[0].value
     selectedColorName = this.colorsList[0].label
+    animatedPriceValue
+
+    // on page load
+    connectedCallback(){
+      this.animatePrice()
+    }
 
     //Handler for when a variant is selected
     selectionHandler(event){
@@ -65,6 +73,7 @@ export default class BuildAndPrice extends LightningElement {
         this.selectedVariant = {...selected, imageName:this.selectedImageName}
         this.selectedPrice = this.selectedVariant.price
         this.updateVariants(variant)
+        this.animatePrice()
     }
 
     //Handler for when a color is selected
@@ -105,6 +114,18 @@ export default class BuildAndPrice extends LightningElement {
      
     submitHander(){
       console.log("Form Submitted!!")
+    }
+
+    //method to animate the price
+    animatePrice(){
+      this.animatedPriceValue = ANIMATED_STARTING_PRICE
+      let interval = window.setInterval(()=>{
+        if(this.selectedPrice !== this.animatedPriceValue){
+          this.animatedPriceValue = this.animatedPriceValue+100
+        } else {
+          window.clearInterval(interval)
+        }
+      }, 10)
     }
 
 }

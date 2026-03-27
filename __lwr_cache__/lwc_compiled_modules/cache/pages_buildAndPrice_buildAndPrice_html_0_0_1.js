@@ -103,7 +103,7 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     });
   })]))]), api_element("div", stc4, [api_element("div", stc5, [api_custom_element("components-price-footer", _componentsPriceFooter, {
     props: {
-      "price": $cmp.selectedPrice
+      "price": $cmp.animatedPriceValue
     },
     key: 13,
     on: {

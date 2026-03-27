@@ -55,6 +55,7 @@ const COLORS = [{
   label: "Platinum White (Pearlescent)",
   value: "platinum_white"
 }];
+const ANIMATED_STARTING_PRICE = 38000;
 class BuildAndPrice extends LightningElement {
   constructor(...args) {
     super(...args);
@@ -65,7 +66,13 @@ class BuildAndPrice extends LightningElement {
     this.selectedPrice = this.selectedVariant.price;
     this.selectedImageName = this.colorsList[0].value;
     this.selectedColorName = this.colorsList[0].label;
+    this.animatedPriceValue = void 0;
   }
+  // on page load
+  connectedCallback() {
+    this.animatePrice();
+  }
+
   //Handler for when a variant is selected
   selectionHandler(event) {
     console.log("selected record", event.detail.selected);
@@ -79,6 +86,7 @@ class BuildAndPrice extends LightningElement {
     });
     this.selectedPrice = this.selectedVariant.price;
     this.updateVariants(variant);
+    this.animatePrice();
   }
 
   //Handler for when a color is selected
@@ -124,10 +132,22 @@ class BuildAndPrice extends LightningElement {
   submitHander() {
     console.log("Form Submitted!!");
   }
+
+  //method to animate the price
+  animatePrice() {
+    this.animatedPriceValue = ANIMATED_STARTING_PRICE;
+    let interval = window.setInterval(() => {
+      if (this.selectedPrice !== this.animatedPriceValue) {
+        this.animatedPriceValue = this.animatedPriceValue + 100;
+      } else {
+        window.clearInterval(interval);
+      }
+    }, 10);
+  }
   /*LWC compiler v2.38.1*/
 }
 _registerDecorators(BuildAndPrice, {
-  fields: ["showModal", "crvVariants", "colorsList", "selectedVariant", "selectedPrice", "selectedImageName", "selectedColorName"]
+  fields: ["showModal", "crvVariants", "colorsList", "selectedVariant", "selectedPrice", "selectedImageName", "selectedColorName", "animatedPriceValue"]
 });
 export default _registerComponent(BuildAndPrice, {
   tmpl: _tmpl
