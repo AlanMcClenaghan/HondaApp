@@ -130,7 +130,7 @@
   [
     "pages/buildAndPrice@0.0.1",
     {
-      "ownHash": "9d0402fca6bd8499c74d253d8f36fe9e",
+      "ownHash": "dde776e064f71bda7adac7973c664e8a",
       "module": "./cache/pages_buildAndPrice_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_0_0_1.meta.json"
     }
@@ -138,7 +138,7 @@
   [
     "pages/buildAndPrice#buildAndPrice.html@0.0.1",
     {
-      "ownHash": "6c90287cc90b2e7ca2a2c2ffe4ffbf43",
+      "ownHash": "25d58407ae475f7208330d9e41e55755",
       "module": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.meta.json"
     }
@@ -229,6 +229,38 @@
       "ownHash": "13fcec3d73f055fccd306149598cb9b5",
       "module": "./cache/components_carDetails_carDetails_scoped_css_scoped=true_0_0_1.js",
       "moduleMeta": "./cache/components_carDetails_carDetails_scoped_css_scoped=true_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/rangeSelection@0.0.1",
+    {
+      "ownHash": "b316348de868db78664e18499113ef17",
+      "module": "./cache/components_rangeSelection_0_0_1.js",
+      "moduleMeta": "./cache/components_rangeSelection_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/rangeSelection#rangeSelection.html@0.0.1",
+    {
+      "ownHash": "a5927792bbd48fd861b254a4cf09c078",
+      "module": "./cache/components_rangeSelection_rangeSelection_html_0_0_1.js",
+      "moduleMeta": "./cache/components_rangeSelection_rangeSelection_html_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/rangeSelection#rangeSelection.css@0.0.1",
+    {
+      "ownHash": "2d823aa1989d7990926380db4f563fac",
+      "module": "./cache/components_rangeSelection_rangeSelection_css_0_0_1.js",
+      "moduleMeta": "./cache/components_rangeSelection_rangeSelection_css_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/rangeSelection#rangeSelection.scoped.css?scoped=true@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/components_rangeSelection_rangeSelection_scoped_css_scoped=true_0_0_1.js",
+      "moduleMeta": "./cache/components_rangeSelection_rangeSelection_scoped_css_scoped=true_0_0_1.meta.json"
     }
   ]
 ]

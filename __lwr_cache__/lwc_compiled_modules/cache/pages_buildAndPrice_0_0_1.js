@@ -37,12 +37,18 @@ const CRV_VARIANTS = [{
 class BuildAndPrice extends LightningElement {
   constructor(...args) {
     super(...args);
+    this.crvVariants = CRV_VARIANTS;
     this.selectedVariant = CRV_VARIANTS[0];
+  }
+  //Handler for when a variant is selected
+  selectionHandler(event) {
+    console.log("selected record", event.detail.selected);
+    console.log("selected variant", event.detail.variant);
   }
   /*LWC compiler v2.38.1*/
 }
 _registerDecorators(BuildAndPrice, {
-  fields: ["selectedVariant"]
+  fields: ["crvVariants", "selectedVariant"]
 });
 export default _registerComponent(BuildAndPrice, {
   tmpl: _tmpl

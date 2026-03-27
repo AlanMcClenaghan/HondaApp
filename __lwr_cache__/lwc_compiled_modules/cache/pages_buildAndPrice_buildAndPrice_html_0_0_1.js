@@ -5,8 +5,9 @@ import _implicitStylesheets from "./buildAndPrice.css";
 import _implicitScopedStylesheets from "./buildAndPrice.scoped.css?scoped=true";
 
 import _componentsCarDetails from "components/carDetails";
+import _componentsRangeSelection from "components/rangeSelection";
 import {parseFragment, registerTemplate} from "lwc";
-const $fragment1 = parseFragment`<div class="slds-col slds-size_12-of-12 slds-large-size_4-of-12${0}"${2}>Range and color selection components will come here</div>`;
+const $fragment1 = parseFragment`<h2 class="slds-text-heading_large${0}"${2}>CR-V Range</h2>`;
 const stc0 = {
   classMap: {
     "slds-p-around_medium": true
@@ -29,14 +30,31 @@ const stc2 = {
   },
   key: 2
 };
+const stc3 = {
+  classMap: {
+    "slds-col": true,
+    "slds-size_12-of-12": true,
+    "slds-large-size_4-of-12": true
+  },
+  key: 4
+};
 function tmpl($api, $cmp, $slotset, $ctx) {
-  const {c: api_custom_element, h: api_element, st: api_static_fragment} = $api;
+  const {c: api_custom_element, h: api_element, st: api_static_fragment, b: api_bind} = $api;
+  const {_m0} = $ctx;
   return [api_element("main", stc0, [api_element("div", stc1, [api_element("div", stc2, [api_custom_element("components-car-details", _componentsCarDetails, {
     props: {
       "selectedVariant": $cmp.selectedVariant
     },
     key: 3
-  })]), api_static_fragment($fragment1(), 5)])])];
+  })]), api_element("div", stc3, [api_static_fragment($fragment1(), 6), api_custom_element("components-range-selection", _componentsRangeSelection, {
+    props: {
+      "variants": $cmp.crvVariants
+    },
+    key: 7,
+    on: {
+      "selection": _m0 || ($ctx._m0 = api_bind($cmp.selectionHandler))
+    }
+  })])])])];
   /*LWC compiler v2.38.1*/
 }
 export default registerTemplate(tmpl);
