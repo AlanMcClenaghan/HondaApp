@@ -19,6 +19,9 @@ class PriceFooter extends LightningElement {
       return null;
     }
   }
+  contactUsHandler() {
+    this.dispatchEvent(new CustomEvent('openmodal'));
+  }
   /*LWC compiler v2.38.1*/
 }
 _registerDecorators(PriceFooter, {

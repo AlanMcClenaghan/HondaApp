@@ -19,5 +19,9 @@ export default class PriceFooter extends LightningElement{
             return null
         }
     }
+
+    contactUsHandler(){
+        this.dispatchEvent(new CustomEvent('openmodal'))
+    }
     
 }

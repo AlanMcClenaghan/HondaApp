@@ -49,6 +49,7 @@ const CRV_VARIANTS = [
 
 export default class BuildAndPrice extends LightningElement {
 
+    showModal = false
     crvVariants = CRV_VARIANTS
     colorsList = COLORS
     selectedVariant = CRV_VARIANTS[0]
@@ -91,6 +92,19 @@ export default class BuildAndPrice extends LightningElement {
         let checked = item.variant === value
         return {...item, checked}
       })
+    }
+
+    //open the modal 
+    openModalHandler(){
+      this.showModal = true
+    }
+
+    cancelHandler(){
+      this.showModal = false
+    }
+     
+    submitHander(){
+      console.log("Form Submitted!!")
     }
 
 }

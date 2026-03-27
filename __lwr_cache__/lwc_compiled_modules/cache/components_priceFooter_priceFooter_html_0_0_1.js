@@ -6,7 +6,6 @@ import _implicitScopedStylesheets from "./priceFooter.scoped.css?scoped=true";
 
 import {parseFragment, registerTemplate} from "lwc";
 const $fragment1 = parseFragment`<sup${3}>*</sup>`;
-const $fragment2 = parseFragment`<button class="slds-button slds-button_destructive${0}"${2}>Save and Contact Us</button>`;
 const stc0 = {
   classMap: {
     "slds-p-around_medium": true,
@@ -22,9 +21,20 @@ const stc1 = {
   },
   key: 1
 };
+const stc2 = {
+  "slds-button": true,
+  "slds-button_destructive": true
+};
 function tmpl($api, $cmp, $slotset, $ctx) {
-  const {d: api_dynamic_text, t: api_text, st: api_static_fragment, h: api_element} = $api;
-  return [api_element("footer", stc0, [api_element("div", stc1, [api_text(api_dynamic_text($cmp.formattedPrice)), api_static_fragment($fragment1(), 3)]), api_static_fragment($fragment2(), 5)])];
+  const {d: api_dynamic_text, t: api_text, st: api_static_fragment, h: api_element, b: api_bind} = $api;
+  const {_m0} = $ctx;
+  return [api_element("footer", stc0, [api_element("div", stc1, [api_text(api_dynamic_text($cmp.formattedPrice)), api_static_fragment($fragment1(), 3)]), api_element("button", {
+    classMap: stc2,
+    key: 4,
+    on: {
+      "click": _m0 || ($ctx._m0 = api_bind($cmp.contactUsHandler))
+    }
+  }, [api_text("Save and Contact Us")])])];
   /*LWC compiler v2.38.1*/
 }
 export default registerTemplate(tmpl);

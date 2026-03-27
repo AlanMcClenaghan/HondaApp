@@ -8,9 +8,11 @@ import _componentsCarDetails from "components/carDetails";
 import _componentsRangeSelection from "components/rangeSelection";
 import _componentsColorSelection from "components/colorSelection";
 import _componentsPriceFooter from "components/priceFooter";
+import _componentsModal from "components/modal";
 import {parseFragment, registerTemplate} from "lwc";
 const $fragment1 = parseFragment`<h2 class="slds-text-heading_large${0}"${2}>CR-V Range</h2>`;
 const $fragment2 = parseFragment`<h2 class="slds-text-heading_large slds-m-top_large${0}"${2}>CR-V Colors</h2>`;
+const $fragment3 = parseFragment`<h1${3}>Form will come here</h1>`;
 const stc0 = {
   key: 0
 };
@@ -53,9 +55,29 @@ const stc5 = {
   },
   key: 12
 };
+const stc6 = {
+  props: {
+    "heading": "Fill in your details"
+  },
+  key: 15
+};
+const stc7 = {
+  attrs: {
+    "slot": "footer"
+  },
+  key: 18
+};
+const stc8 = {
+  "slds-button": true,
+  "slds-button_neutral": true
+};
+const stc9 = {
+  "slds-button": true,
+  "slds-button_destructive": true
+};
 function tmpl($api, $cmp, $slotset, $ctx) {
-  const {c: api_custom_element, h: api_element, st: api_static_fragment, b: api_bind, k: api_key, i: api_iterator, f: api_flatten} = $api;
-  const {_m0, _m1} = $ctx;
+  const {c: api_custom_element, h: api_element, st: api_static_fragment, b: api_bind, k: api_key, i: api_iterator, f: api_flatten, t: api_text, fr: api_fragment} = $api;
+  const {_m0, _m1, _m2, _m3, _m4} = $ctx;
   return [api_element("main", stc0, [api_element("div", stc1, [api_element("div", stc2, [api_custom_element("components-car-details", _componentsCarDetails, {
     props: {
       "selectedVariant": $cmp.selectedVariant
@@ -83,8 +105,23 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     props: {
       "price": $cmp.selectedPrice
     },
-    key: 13
-  })])])])];
+    key: 13,
+    on: {
+      "openmodal": _m2 || ($ctx._m2 = api_bind($cmp.openModalHandler))
+    }
+  })])])]), $cmp.showModal ? api_fragment(14, [api_custom_element("components-modal", _componentsModal, stc6, [api_static_fragment($fragment3(), 17), api_element("div", stc7, [api_element("button", {
+    classMap: stc8,
+    key: 19,
+    on: {
+      "click": _m3 || ($ctx._m3 = api_bind($cmp.cancelHandler))
+    }
+  }, [api_text("Cancel")]), api_element("button", {
+    classMap: stc9,
+    key: 20,
+    on: {
+      "click": _m4 || ($ctx._m4 = api_bind($cmp.submitHander))
+    }
+  }, [api_text("Submit")])])])], 0) : null];
   /*LWC compiler v2.38.1*/
 }
 export default registerTemplate(tmpl);

@@ -17,8 +17,19 @@
         </div>
         <div class="slds-grid slds-wrap">
             <div class="slds-col slds-large-size_12-of-12">
-                <components-price-footer price={selectedPrice}></components-price-footer>
+                <components-price-footer price={selectedPrice} onopenmodal={openModalHandler}></components-price-footer>
             </div>
         </div>
     </main>
+
+    <template lwc:if={showModal}>
+        <components-modal heading="Fill in your details">
+            <h1>Form will come here</h1>
+            <div slot="footer">
+                <button class="slds-button slds-button_neutral" onclick={cancelHandler}>Cancel</button>
+                <button class="slds-button slds-button_destructive" onclick={submitHander}>Submit</button>
+            </div>
+        </components-modal>
+    </template>
+
 </template>

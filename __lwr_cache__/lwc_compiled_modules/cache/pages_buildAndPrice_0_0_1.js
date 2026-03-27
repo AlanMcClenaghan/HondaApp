@@ -58,6 +58,7 @@ const COLORS = [{
 class BuildAndPrice extends LightningElement {
   constructor(...args) {
     super(...args);
+    this.showModal = false;
     this.crvVariants = CRV_VARIANTS;
     this.colorsList = COLORS;
     this.selectedVariant = CRV_VARIANTS[0];
@@ -112,10 +113,21 @@ class BuildAndPrice extends LightningElement {
       });
     });
   }
+
+  //open the modal 
+  openModalHandler() {
+    this.showModal = true;
+  }
+  cancelHandler() {
+    this.showModal = false;
+  }
+  submitHander() {
+    console.log("Form Submitted!!");
+  }
   /*LWC compiler v2.38.1*/
 }
 _registerDecorators(BuildAndPrice, {
-  fields: ["crvVariants", "colorsList", "selectedVariant", "selectedPrice", "selectedImageName", "selectedColorName"]
+  fields: ["showModal", "crvVariants", "colorsList", "selectedVariant", "selectedPrice", "selectedImageName", "selectedColorName"]
 });
 export default _registerComponent(BuildAndPrice, {
   tmpl: _tmpl

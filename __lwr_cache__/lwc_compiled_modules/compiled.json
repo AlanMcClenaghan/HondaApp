@@ -130,7 +130,7 @@
   [
     "pages/buildAndPrice@0.0.1",
     {
-      "ownHash": "235a4d297030ffc5f09973f4c7e15e61",
+      "ownHash": "97cb2f7f66e0e512e1ef88a7e03cd373",
       "module": "./cache/pages_buildAndPrice_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_0_0_1.meta.json"
     }
@@ -138,7 +138,7 @@
   [
     "pages/buildAndPrice#buildAndPrice.html@0.0.1",
     {
-      "ownHash": "0ec2ad278d1fb34d220884fd32023ee4",
+      "ownHash": "1f8fccf68a65331db3429b1b639166db",
       "module": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_html_0_0_1.meta.json"
     }
@@ -146,7 +146,7 @@
   [
     "pages/buildAndPrice#buildAndPrice.css@0.0.1",
     {
-      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "ownHash": "1a32b06a8ccbb89f9fae52c5d17d4440",
       "module": "./cache/pages_buildAndPrice_buildAndPrice_css_0_0_1.js",
       "moduleMeta": "./cache/pages_buildAndPrice_buildAndPrice_css_0_0_1.meta.json"
     }
@@ -298,7 +298,7 @@
   [
     "components/priceFooter@0.0.1",
     {
-      "ownHash": "1cf975c2c1b46f8bda811260e56192bd",
+      "ownHash": "282c257ee2b26276db0f88e296108259",
       "module": "./cache/components_priceFooter_0_0_1.js",
       "moduleMeta": "./cache/components_priceFooter_0_0_1.meta.json"
     }
@@ -306,7 +306,7 @@
   [
     "components/priceFooter#priceFooter.html@0.0.1",
     {
-      "ownHash": "aafc6d44a499ce8b9e236e6beac1f0f0",
+      "ownHash": "bc2fd3132d9176f3ae2eb4d6725bcde6",
       "module": "./cache/components_priceFooter_priceFooter_html_0_0_1.js",
       "moduleMeta": "./cache/components_priceFooter_priceFooter_html_0_0_1.meta.json"
     }
@@ -325,6 +325,38 @@
       "ownHash": "13fcec3d73f055fccd306149598cb9b5",
       "module": "./cache/components_priceFooter_priceFooter_scoped_css_scoped=true_0_0_1.js",
       "moduleMeta": "./cache/components_priceFooter_priceFooter_scoped_css_scoped=true_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/modal@0.0.1",
+    {
+      "ownHash": "47ce78418b110ff13d37df340fe540a5",
+      "module": "./cache/components_modal_0_0_1.js",
+      "moduleMeta": "./cache/components_modal_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/modal#modal.html@0.0.1",
+    {
+      "ownHash": "16a13bd360b0b2a6b2558bebe1bf23c3",
+      "module": "./cache/components_modal_modal_html_0_0_1.js",
+      "moduleMeta": "./cache/components_modal_modal_html_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/modal#modal.css@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/components_modal_modal_css_0_0_1.js",
+      "moduleMeta": "./cache/components_modal_modal_css_0_0_1.meta.json"
+    }
+  ],
+  [
+    "components/modal#modal.scoped.css?scoped=true@0.0.1",
+    {
+      "ownHash": "13fcec3d73f055fccd306149598cb9b5",
+      "module": "./cache/components_modal_modal_scoped_css_scoped=true_0_0_1.js",
+      "moduleMeta": "./cache/components_modal_modal_scoped_css_scoped=true_0_0_1.meta.json"
     }
   ]
 ]
