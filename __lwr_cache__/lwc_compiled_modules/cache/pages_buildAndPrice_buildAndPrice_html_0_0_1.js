@@ -8,11 +8,11 @@ import _componentsCarDetails from "components/carDetails";
 import _componentsRangeSelection from "components/rangeSelection";
 import _componentsColorSelection from "components/colorSelection";
 import _componentsPriceFooter from "components/priceFooter";
+import _componentsLeadForm from "components/leadForm";
 import _componentsModal from "components/modal";
 import {parseFragment, registerTemplate} from "lwc";
 const $fragment1 = parseFragment`<h2 class="slds-text-heading_large${0}"${2}>CR-V Range</h2>`;
 const $fragment2 = parseFragment`<h2 class="slds-text-heading_large slds-m-top_large${0}"${2}>CR-V Colors</h2>`;
-const $fragment3 = parseFragment`<h1${3}>Form will come here</h1>`;
 const stc0 = {
   key: 0
 };
@@ -65,7 +65,7 @@ const stc7 = {
   attrs: {
     "slot": "footer"
   },
-  key: 18
+  key: 17
 };
 const stc8 = {
   "slds-button": true,
@@ -109,15 +109,20 @@ function tmpl($api, $cmp, $slotset, $ctx) {
     on: {
       "openmodal": _m2 || ($ctx._m2 = api_bind($cmp.openModalHandler))
     }
-  })])])]), $cmp.showModal ? api_fragment(14, [api_custom_element("components-modal", _componentsModal, stc6, [api_static_fragment($fragment3(), 17), api_element("div", stc7, [api_element("button", {
+  })])])]), $cmp.showModal ? api_fragment(14, [api_custom_element("components-modal", _componentsModal, stc6, [api_custom_element("components-lead-form", _componentsLeadForm, {
+    props: {
+      "description": $cmp.description
+    },
+    key: 16
+  }), api_element("div", stc7, [api_element("button", {
     classMap: stc8,
-    key: 19,
+    key: 18,
     on: {
       "click": _m3 || ($ctx._m3 = api_bind($cmp.cancelHandler))
     }
   }, [api_text("Cancel")]), api_element("button", {
     classMap: stc9,
-    key: 20,
+    key: 19,
     on: {
       "click": _m4 || ($ctx._m4 = api_bind($cmp.submitHander))
     }
